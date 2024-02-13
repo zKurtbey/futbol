@@ -55,32 +55,29 @@ function baslat(secilensorular, skor, secenekler, sklar, dogrusk){
         }
         secilensorular.push(secilenfoto);
         document.querySelector("#resim").setAttribute("src", secilenfoto);
-        document.querySelector("#resim").onload = resimloaded();
-        function resimloaded(){
-            var sklar = [document.querySelectorAll(".sklar")[0], document.querySelectorAll(".sklar")[1], document.querySelectorAll(".sklar")[2], document.querySelectorAll(".sklar")[3]];
-            var dogrusk = sklar[Math.floor(Math.random() * sklar.length)];
-            sklar.splice(sklar.indexOf(dogrusk), 1);
-            dogrusk.innerHTML = secenekler[secenekler.findIndex(item => item.foto === document.querySelector("#resim").getAttribute("src"))].oyuncu;
-            secenekler.splice(secenekler.findIndex(item => item.oyuncu === dogrusk.textContent), 1);
-            sklar.forEach((sklar) =>{
-                sklar.innerHTML=secenekler[Math.floor(Math.random() * secenekler.length)].oyuncu;
-                secenekler.splice(secenekler.findIndex(item => item.oyuncu === sklar.textContent), 1);
-                sklar.addEventListener("click", ()=>{
-                    document.querySelector("#resim").style="filter: brightness(1)";
-                    setTimeout(() => {
-                        fail(secilensorular, skor, secenekler, sklar, dogrusk);
-                    }, 500);
-                });
-            });
-            dogrusk.addEventListener("click", ()=>{
+        var sklar = [document.querySelectorAll(".sklar")[0], document.querySelectorAll(".sklar")[1], document.querySelectorAll(".sklar")[2], document.querySelectorAll(".sklar")[3]];
+        var dogrusk = sklar[Math.floor(Math.random() * sklar.length)];
+        sklar.splice(sklar.indexOf(dogrusk), 1);
+        dogrusk.innerHTML = secenekler[secenekler.findIndex(item => item.foto === document.querySelector("#resim").getAttribute("src"))].oyuncu;
+        secenekler.splice(secenekler.findIndex(item => item.oyuncu === dogrusk.textContent), 1);
+        sklar.forEach((sklar) =>{
+            sklar.innerHTML=secenekler[Math.floor(Math.random() * secenekler.length)].oyuncu;
+            secenekler.splice(secenekler.findIndex(item => item.oyuncu === sklar.textContent), 1);
+            sklar.addEventListener("click", ()=>{
                 document.querySelector("#resim").style="filter: brightness(1)";
-                skor++;
                 setTimeout(() => {
-                    document.querySelector("#resim").style="filter: brightness(0)";
-                    baslat(secilensorular, skor, secenekler, sklar, dogrusk);
+                    fail(secilensorular, skor, secenekler, sklar, dogrusk);
                 }, 500);
             });
-        }
+        });
+        dogrusk.addEventListener("click", ()=>{
+            document.querySelector("#resim").style="filter: brightness(1)";
+            skor++;
+            setTimeout(() => {
+                document.querySelector("#resim").style="filter: brightness(0)";
+                baslat(secilensorular, skor, secenekler, sklar, dogrusk);
+            }, 500);
+        });
     }
 }
 function fail(secilensorular, skor, secenekler, sklar, dogrusk){

@@ -48,7 +48,7 @@
         const url = new URL('https://futbolunu.kanitla.online/golgeli.html');
 
         // Remove the last segment (file name) from the pathname
-        url.pathname = url.pathname.substring(0, url.pathname.lastIndexOf('/'));
+        url.pathname = url.pathname.substring(0, url.pathname.lastIndexOf('/')) + "golgelimod";
 
         console.log(url.href); // Output: https://www.example.com/path/to
         
