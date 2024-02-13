@@ -28,7 +28,8 @@ function baslat(secilensorular, skor, secenekler, sklar, dogrusk){
         {oyuncu : "Kevin de Bruyne", foto : "22.png"},
         {oyuncu : "Erling Haaland", foto : "23.png"},
         {oyuncu : "Xavi", foto : "24.png"},
-        {oyuncu : "Zlatan Ibrahimovic", foto : "25.png"}
+        {oyuncu : "Zlatan Ibrahimovic", foto : "25.png"},
+        {oyuncu : "Canın sağ olsun", foto: "26.png"}
     ];
     if(sklar){
         sklar.forEach((sklar)=>{
