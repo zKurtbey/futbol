@@ -30,6 +30,57 @@ header h1{
     color: rgb(243, 239, 233);
     font-size: 3svw;
 }
+#tiktoklink{
+    position: absolute;
+    right: calc(1% + 2svw);
+    width: calc(2% + 1svw);
+    opacity: .9;
+}
+#instalink{
+    position: absolute;
+    right: calc(4.5% + 2svw);
+    width: calc(2.5% + 1svw);
+}
+#youtubelink{
+    position: absolute;
+    right: calc(9% + 2svw);
+    opacity: .9;
+}
+#ytarka{
+    transition: all .2s ease;
+}
+#ytarka:hover{
+    fill: rgba(82, 0, 0, 0.2);
+}
+#instaarka{
+    transition: all .2s ease;
+}
+#instaarka:hover{
+    fill: rgb(216, 204, 37);
+}
+#ttarka{
+    transition: all .2s ease;
+}
+#ttarka:hover{
+    fill: rgb(41, 38, 38)
+}
+#link{
+    position: absolute;
+    right: calc(12% + 3.5svw);
+    width: calc(2.5% + 2svw);
+}
+#discord{
+    margin: 0;
+    position: relative;
+    width: calc(5% + 4svw);
+    opacity: .9;
+}
+#dcarka{
+    transition: all .2s ease;
+}
+#dcarka:hover{
+    fill: #6665d2;
+}
 main{
     display: flex;
     align-items: center;
