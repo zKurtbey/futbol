@@ -1,12 +1,3 @@
-// Example URL with a file name
-const url = new URL('https://futbolunu.kanitla.online/golgeli.html');
-
-// Remove the last segment (file name) from the pathname
-url.pathname = url.pathname.substring(0, url.pathname.lastIndexOf('/')) + "golgeli";
-
-console.log(url.href); // Output: https://www.example.com/path/to
-
-history.pushState({}, '', url);
 var secilensorular = [];
 let skor = 0;
 baslat(secilensorular, skor); 
