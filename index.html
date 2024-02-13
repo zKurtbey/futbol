@@ -54,5 +54,14 @@
             </a>
         </div>
     </main>
+    <script>
+        // Example URL with a file name
+        const url = new URL('https://futbolunu.kanitla.online/index.html');
+
+        // Remove the last segment (file name) from the pathname
+        url.pathname = url.pathname.substring(0, url.pathname.lastIndexOf('/')) + "anasayfa";
+
+        console.log(url.href); // Output: https://www.example.com/path/to
+    </script>
 </body>
 </html>
