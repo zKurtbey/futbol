@@ -62,6 +62,8 @@
         url.pathname = url.pathname.substring(0, url.pathname.lastIndexOf('/')) + "anasayfa";
 
         console.log(url.href); // Output: https://www.example.com/path/to
+        
+        history.pushState({}, '', url);
     </script>
 </body>
 </html>
