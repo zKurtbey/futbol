@@ -62,7 +62,8 @@ function baslat(secilensorular, skor, secenekler, sklar, dogrusk){
         }
         secilensorular.push(secilenfoto);
         document.querySelector("#resim").setAttribute("src", secilenfoto);
-        document.querySelector("#resim").onload(()=>{
+        document.querySelector("#resim").onload = resimloaded();
+        function resimloaded(){
             var sklar = [document.querySelectorAll(".sklar")[0], document.querySelectorAll(".sklar")[1], document.querySelectorAll(".sklar")[2], document.querySelectorAll(".sklar")[3]];
             var dogrusk = sklar[Math.floor(Math.random() * sklar.length)];
             sklar.splice(sklar.indexOf(dogrusk), 1);
@@ -79,7 +80,7 @@ function baslat(secilensorular, skor, secenekler, sklar, dogrusk){
                 skor++;
                 baslat(secilensorular, skor, secenekler, sklar, dogrusk);
             });
-        });
+        }
     }
 }
 function fail(secilensorular, skor, secenekler, sklar, dogrusk){
