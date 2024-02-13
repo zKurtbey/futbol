@@ -5,6 +5,8 @@ const url = new URL('https://futbolunu.kanitla.online/normal.html');
 url.pathname = url.pathname.substring(0, url.pathname.lastIndexOf('/')) + "normalmod";
 
 console.log(url.href); // Output: https://www.example.com/path/to
+
+history.pushState({}, '', url);
 var secilensorular = [];
 let skor = 0;
 baslat(secilensorular, skor);
