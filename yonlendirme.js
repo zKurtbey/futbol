@@ -1,9 +1,9 @@
-if (window.location.pathname === "/anasayfa") {
-    window.location.replace("/index.html");
+if (window.location.pathname === "https://futbolunu.kanitla.online/anasayfa") {
+    window.location.replace("https://futbolunu.kanitla.online/index.html");
 }
 if (window.location.pathname === "/normalmod") {
-    window.location.replace("/normal.html");
+    window.location.replace("https://futbolunu.kanitla.online/normal.html");
 }
 if (window.location.pathname === "/golgelimod") {
-    window.location.replace("/golgeli.html");
+    window.location.replace("https://futbolunu.kanitla.online/golgeli.html");
 }
